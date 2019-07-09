@@ -1,0 +1,140 @@
+footer {
+	margin-top: 60px;
+	background: $brand-secondary;
+	color: #fff;
+	padding-top: 40px;
+
+	a {
+		color: #fff;
+		
+		&:hover {
+			color: #ccc;
+		}
+	}
+
+	.contact {
+		@include minitablet {
+			height: 230px;
+		}
+
+		font-size: 13px;
+	}
+
+
+	.footer-box {
+		@include make-xs-column(12);
+		@include minitablet {
+			@include custom-column(50%);
+		}
+		@include make-md-column(3);
+
+		margin-bottom: 40px;
+
+		h3 {
+			font-size: 20px;
+			font-weight: 600;
+			margin: 0 0 20px 0;
+		}
+
+		p {
+			font-size: 13px;
+		}
+
+		.btn {
+			border: 1px solid #fff;
+
+			&:hover {
+				background: transparent;
+			}
+		}
+
+		.fa {
+			font-size: 20px;
+			width: 35px;
+		}
+	}
+
+	.newsletter {
+		.checkbox {
+			margin-top: 10px;
+			margin-bottom: 5px;
+
+			input {
+				float: left;
+				margin-right: 5px;
+			}
+		}
+
+		.agree {
+			font-size: 11px;
+			font-weight: 300;
+			font-style: italic;
+			line-height: 1.2;
+		}	
+
+		.form-control {
+			color: #9D9E9E;
+		}		
+	}
+
+	.contact div {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}	
+
+	.footer-menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 13px;
+
+		li {
+			line-height: 2;
+		}
+	}
+}
+
+// stopka dolna
+
+.footer-bottom {
+	background: $dark;
+	color: #378C9C;
+	font-size: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	@include tablet {
+		font-size: 11px;
+	}
+
+	a {
+		color: #378C9C;
+		
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+
+	.rights {
+		text-align: center;
+		display: block;
+
+		@include minitablet {
+			display: inline-block;
+			text-align: left;
+		}
+	}
+
+	.made {
+		text-align: center;
+		display: block;
+
+		@include minitablet {
+			display: inline-block;
+			float: right;
+		}		
+	}
+}

@@ -1,0 +1,145 @@
+.blog {
+	article {
+		margin-bottom: 40px;
+
+		.thumb {
+			position: relative;
+
+			img {
+				object-fit: cover;
+				height: 350px;
+				width: 100%;
+				@include border-radius(0 90px 0 0px);
+
+				@include tablet {
+					height: 215px;
+				}
+
+				@include desktop {
+					height: 350px;
+				}
+			}
+
+			.date {
+				position: absolute;
+				right: 35px;
+				top: 30px;
+				width: 90px;
+				height: 90px;
+				line-height: 90px;
+				@include border-radius(50%);
+				background: #dff77a;
+				color: #000;
+				font-weight: 600;
+				font-size: 13px;
+				text-align: center;
+			}
+		}
+
+		.article-excerpt {
+			border: 1px solid $brand-primary;
+			border-top: none;
+			@include border-radius(0 0px 0 60px);	
+			padding: 20px;		
+
+			.excerpt {
+				font-size: 12px;
+
+				@include tablet {
+					font-size: 14px;
+				}
+			}
+
+			.title {
+				font-size: 16px;
+				margin-bottom: 5px;
+				font-weight: 600;
+				padding-right: 30px;
+
+				@include tablet {
+					font-size: 18px;
+					padding-right: 45px;
+				}
+
+				@include desktop {
+					font-size: 20px;
+				}				
+			}
+
+			.meta {
+				margin-bottom: 15px;
+
+				.category {
+					font-size: 12px;								
+				}
+			}
+
+		}	
+
+		.article-excerpt.no-thumb {
+			@include border-radius(0 90px 0 60px);
+			border-top: 1px solid $brand-primary;
+		}
+	}
+}
+
+
+// single
+
+
+.blog-single {
+	margin-top: 0;
+
+	.thumb {
+		img {
+			height: auto !important;
+			border-radius: 0 !important;
+		}
+	}	
+
+	.article-single {
+		margin-top: 30px;
+
+		.title {
+			font-size: 16px;
+			margin-bottom: 5px;
+			font-weight: 600;
+
+			@include tablet {
+				font-size: 18px;
+			}
+
+			@include desktop {
+				font-size: 20px;
+			}				
+		}
+
+		.meta {
+			margin-bottom: 15px;
+
+			@include minitablet {
+				@include clearfix;
+			}
+
+			.date {
+				font-size: 12px;
+				font-weight: 600;
+				color: $dark;
+
+				@include minitablet {
+					float: left;
+				}
+			}
+
+			.category {
+				font-size: 12px;	
+
+				@include minitablet {
+					float: left;
+					margin-left: 10px;
+				}							
+			}
+		}	
+	}
+
+}

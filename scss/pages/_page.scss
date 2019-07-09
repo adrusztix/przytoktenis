@@ -1,0 +1,119 @@
+.top-page-overlay:before {
+	content: "";
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: none repeat 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.top-page-header {
+	background: url('../images/page-header.jpg');
+	@include cover;
+	background-repeat: no-repeat;
+	background-position: 40% 50%;
+	position: relative;
+	height: 300px;
+	margin-bottom: 40px;
+
+	@include tablethor {
+		background-position: 60% 50%;
+	}	
+
+	@include desktop {
+		height: 360px;
+		background-position: 50% 50%;
+	}
+
+	@include semihd {
+		background-position: 65% 50%;
+	}	
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		@include middle-y;
+		color: #fff;
+		font-size: 36px;
+		font-weight: 300;
+
+		@include tablet {
+			font-size: 50px;
+		}		
+	}
+}
+
+.top-page-header-blog {
+	background: url('../images/page-header-blog.jpg');
+	background-position: 77% 50%;
+	background-repeat: no-repeat;
+	@include cover;
+
+	@include tablet {
+		background-position: 85% 50%;
+	}
+}
+
+// content
+
+.page-content {
+
+	@include tablethor {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+}
+
+.page-sidebar {
+	@include make-row();
+
+	.page-content {
+		@include make-xs-column(12);
+		@include tablethor {
+			@include make-md-column(9);
+		}
+	}
+
+	.sidebar {
+		@include make-xs-column(12);
+		@include tablethor {
+			@include make-md-column(3);
+		}	
+
+		margin-top: 40px;
+
+		@include screen {
+			margin-top: 0;
+		}
+
+		.widget-sidebar {
+			margin-bottom: 40px;	
+			
+			.widget-title {
+				font-size: 20px;
+				font-weight: 300;
+				margin: 0;
+				padding: 20px;
+				background: $brand-primary;
+				border-radius: (0 40px 0 0px);
+				color: #fff;
+				text-transform: uppercase;
+			}	
+
+			.widget-content {
+				border-radius: (0 0px 0 20px);
+				border: 1px solid $brand-primary;
+				padding: 15px 20px;
+				color: #000;
+
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				}
+			}
+		}
+	}
+}

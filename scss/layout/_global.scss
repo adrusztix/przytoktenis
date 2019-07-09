@@ -1,0 +1,56 @@
+a {
+	@include basic-transition;
+}
+
+.header {
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 30px;	
+	color: $brand-primary;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	position: relative;
+	padding-bottom: 10px;
+
+	@include screen {
+		text-align: left;
+		margin-bottom: 60px;
+		margin-top: 60px;
+		font-size: 40px;
+	}
+
+	&:after {
+		content: "";
+		height: 1px;
+		background: $dark;
+		width: 100px;
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		   -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		     -o-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		bottom: 0;	
+
+		@include screen {
+			left: 0;
+			-webkit-transform: none;
+			   -moz-transform: none;
+			    -ms-transform: none;
+			     -o-transform: none;
+			        transform: none;
+		}
+	}
+}
+
+
+.hide-element {
+	opacity: 0;
+}
+
+.show-element {
+	opacity: 1;
+}

@@ -1,0 +1,305 @@
+.offer {
+	img {
+		object-fit: cover;
+		height: 230px;
+		@include border-radius(0 90px 0 60px);
+
+		@include tablet {
+			height: 400px;
+		}
+
+		@include make-xs-column(12);
+		@include make-md-column(6);
+	}
+
+	.offer-box {
+		@include make-row();
+		margin-bottom: 60px;
+	}
+
+	.desc {
+		margin-top: 20px;
+		@include make-xs-column(12);
+		@include make-md-column(6);	
+
+		@include screen {
+			margin-top: 0;
+			position: relative;
+			height: 400px;
+		}	
+
+		.desc-inner {
+			@include screen {
+				@include middle-y;
+			}
+		}
+
+		h2 {
+			margin: 0 0 15px 0;
+			color: $dark;
+			font-weight: 700;
+			font-size: 28px;
+
+			@include tablet {
+				font-size: 50px;
+			}
+		}
+
+		h3 {
+			margin: 0;
+			color: $dark;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 1.4;
+
+			@include tablet {
+				font-size: 20px;
+			}			
+		}	
+
+		.buttons {
+			margin-top: 30px;
+
+			.btn {
+				@include tablet {
+					margin-right: 10px;
+					width: 180px;
+				}
+			}
+		}	
+	}
+}
+
+// parallax
+
+.parallax {
+	background: url("../images/parallax.jpg") no-repeat fixed;
+	@include cover;
+	background-position: 50% 50%;
+    
+    @media all and (max-width: 1199px) {
+    	background-attachment: scroll;
+    } 	
+
+	.parallax-inner {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		color: #fff;
+		text-align: center;
+
+		@include phone {
+			text-align: left;
+		}
+
+		@include desktop {
+			padding-top: 130px;
+			padding-bottom: 130px;
+		}
+
+		h2 {
+			font-size: 36px;
+			font-weight: 700;
+			margin: 0 0 20px 0;
+
+			@include tablet {
+				font-size: 50px;
+			}
+		}
+
+		h3 {
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0;
+			line-height: 1.4;
+
+			@include tablet {
+				font-size: 20px;
+			}		
+		}
+
+		.buttons {
+			margin-top: 25px;
+
+			@include phone {
+				margin-top: 40px;
+			}
+
+			.btn:first-child {
+				margin-bottom: 15px;
+
+				@include phone {
+					margin-bottom: 0;
+				}
+			}
+
+			.btn {
+				display: block;
+				width: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-right: auto;
+				margin-left: auto;
+
+				@include phone {
+					display: inline-block;
+					margin-left: inherit;
+					margin-right: 10px;
+				}
+			}
+	
+			.btn-parallax {
+				background: transparent;
+				border: 1px solid #fff;
+				color: #fff;
+
+				&:hover {
+					background: rgba(255,255,255,.2);
+				}
+			}		
+		}		
+	}
+}
+
+// sylwetka
+
+.about {
+
+	.instruktor {
+		@include make-xs-column(12);
+		@include make-md-column(7);
+
+		h2 {
+			font-size: 30px;
+			font-weight: 800;
+			margin: 0 0 5px 0;
+			color: $dark;
+		}		
+
+		span {
+			font-size: 20px;
+			color: $brand-primary;
+			display: block;
+			margin-bottom: 20px;
+
+			@include desktop {
+				margin-bottom: 40px;
+			}
+		}
+
+		p {
+			line-height: 1.5;
+			margin-bottom: 20px;
+
+			@include tablet {
+				font-size: 16px;
+			}
+
+			@include desktop {
+				font-size: 18px;
+			}			
+		}
+	}
+
+	.foto {
+		padding-top: 15px;
+		overflow: hidden;
+		text-align: center;
+
+		img {
+			@include border-radius(0 90px 0 60px);
+			width: 100%;
+			height: auto;
+	
+			@media (min-width: 490px) {
+				width: auto;
+			}
+
+			@include screen {
+				width: 100%;
+			}
+		}
+
+		@include make-md-column(5);
+
+		@include screen {
+			padding-top: 0;
+		}
+
+	}	
+}
+
+// aktualnosci
+
+.news {
+
+	.news-box {
+		max-width: 490px;
+		margin-right: auto;
+		margin-left: auto;
+
+		.image {
+			position: relative;
+
+			img {
+				object-fit: cover;
+				height: 275px;
+				width: 100%;				
+			}
+
+			.date {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: rgba(0,56,67,.7);
+				width: 100%;
+				padding: 7px 10px 10px 10px;
+				border-top: 1px solid #fff;
+
+				span {
+					color: #fff;
+					font-size: 11px;
+				}
+
+				.fa {
+					color: $brand-primary;
+					font-size: 16px;
+					margin-right: 10px;
+				}
+			}
+
+		}
+
+		.title {
+			font-size: 20px;
+			color: $dark;
+			font-weight: 600;
+			line-height: 1.3;
+			margin-top: 20px;
+			margin-bottom: 10px;
+
+			@include tablet {
+				height: 55px;
+				overflow: hidden;
+			}
+		}
+
+		p {
+			@include tablet {
+				height: 85px;
+				overflow: hidden;
+			}
+
+			@include screen {
+				height: 60px;
+			}
+
+			@include desktop {
+				height: 70px;
+			}			
+		}
+
+		.buttons {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+// menu top
+
+.top-menu-bg {
+	background: $gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	.top-menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: table;
+		width: 100%;
+		text-align: center;
+		font-size: 13px;
+		font-weight: 600;
+		color: $dark;
+
+		@include screen {
+			display: block;
+			text-align: right;
+			width: auto;
+			float: right;
+		}	
+
+		li {
+			display: table-cell;
+
+			@include screen {
+				float: left;
+				margin-right: 30px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			@include screen {
+				margin-right: 40px;
+			}
+
+			&:nth-child(2) {
+				display: none;
+
+				@include minitablet {
+					display: block;
+				}				
+			}	
+			&:nth-child(4) {
+				display: none;
+
+				@include tablethor {
+					display: block;
+				}				
+			}			
+
+			.fa {
+				font-size: 16px;
+				color: $brand-primary;
+				margin-right: 8px;		
+			}
+
+			a {
+				color: $dark;
+				&:hover {
+					color: $brand-primary;
+				}
+			}			
+		}			
+	
+	}
+}
+
+// ------------------- menu top -----------------------------
+
+// top
+.logo-menu {
+
+	.navbar-default {
+		border: 0;
+		margin-bottom: 20px;
+
+		@include screen {
+			margin-bottom: 5px;
+		}
+
+		.navbar-header {
+			margin-top: 20px;
+			
+			@include screen {
+				margin-bottom: 20px;
+			}
+
+			.navbar-toggle {
+				border: 0;
+
+				.icon-bar {
+					width: 36px;
+					height: 5px;
+					@include border-radius(4px);
+				}
+			}
+		
+			.logo {
+			    background: url("../images/logo.png") no-repeat;
+				width: 166px;
+				height: 125px;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+
+				@include retina {
+			        background: url("../images/logo@2x.png") no-repeat;
+			        @include contain;
+			  	}	
+
+
+			  	@include screen {
+			  		margin-top: -40px;
+			  	}
+			} 
+		}
+
+		// menu
+
+		#main-menu {
+			text-transform: uppercase;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-weight: 700;
+			font-size: 16px;	
+			text-align: center;
+
+			@include screen {
+				float: right;
+				padding: 40px 0 0 0;
+				margin-right: -15px;				
+			}
+
+			@include desktop {
+				font-size: 20px;
+			}	
+
+			a {
+				padding-left: 10px;
+				padding-right: 10px;
+				
+				@media (max-width: 991px) {
+					color: #fff;
+				}
+
+				@include screen {
+					padding-right: 15px;
+					padding-left: 28px;
+				}
+			}		
+		}
+
+		.navbar-collapse {
+			border: 0;
+			margin-top: 20px;
+			background: $brand-primary;
+
+			@include screen {
+				background: transparent;
+				margin-top: 0;
+			}
+		}
+	}
+}

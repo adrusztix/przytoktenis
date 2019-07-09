@@ -1,0 +1,15 @@
+.btn-border {
+	border: 1px solid $brand-primary;
+
+	&:hover {
+		color: darken($brand-primary, 10%);
+	}
+}
+
+.btn {
+	@include tablet {
+		padding: 10px 15px;
+	}
+
+	@include basic-transition;
+}

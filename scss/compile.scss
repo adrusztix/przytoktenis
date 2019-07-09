@@ -1,0 +1,34 @@
+// ---------------------
+//     GENERAL
+// ---------------------
+
+@import "helpers/variables-custom";
+@import "helpers/resolutions";
+@import "helpers/mixins";
+
+@import "base/bootstrap";
+@import "base/temp";
+
+// ---------------------
+//     LAYOUT
+// ---------------------
+
+@import "layout/global";
+@import "layout/header";
+@import "layout/slider";
+@import "layout/footer";
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+@import "pages/front-content";
+@import "pages/page";
+@import "pages/blog";
+
+// ---------------------
+//     COMPONENTS
+// ---------------------
+
+@import "components/bxslider";
+@import "components/buttons";
